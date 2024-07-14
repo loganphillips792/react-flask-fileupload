@@ -1,0 +1,22 @@
+{"asctime": "2024-07-14 12:31:22,582", "levelname": "INFO", "name": "werkzeug", "message": " * Detected change in '/Users/logan/Desktop/react-flask-fileupload/backend/main.py', reloading"}
+{"asctime": "2024-07-14 12:31:22,609", "levelname": "INFO", "name": "werkzeug", "message": " * Restarting with stat"}
+{"asctime": "2024-07-14 12:31:22,759", "levelname": "WARNING", "name": "werkzeug", "message": " * Debugger is active!"}
+{"asctime": "2024-07-14 12:31:22,767", "levelname": "INFO", "name": "werkzeug", "message": " * Debugger PIN: 110-677-777"}
+{"asctime": "2024-07-14 12:31:31,033", "levelname": "INFO", "name": "werkzeug", "message": " * Detected change in '/Users/logan/Desktop/react-flask-fileupload/backend/main.py', reloading"}
+{"asctime": "2024-07-14 12:31:31,065", "levelname": "INFO", "name": "werkzeug", "message": " * Restarting with stat"}
+{"asctime": "2024-07-14 12:31:31,166", "levelname": "WARNING", "name": "werkzeug", "message": " * Debugger is active!"}
+{"asctime": "2024-07-14 12:31:31,172", "levelname": "INFO", "name": "werkzeug", "message": " * Debugger PIN: 110-677-777"}
+{"asctime": "2024-07-14 12:31:32,322", "levelname": "INFO", "name": "werkzeug", "message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on http://127.0.0.1:5000"}
+{"asctime": "2024-07-14 12:31:32,322", "levelname": "INFO", "name": "werkzeug", "message": "\u001b[33mPress CTRL+C to quit\u001b[0m"}
+{"asctime": "2024-07-14 12:31:32,324", "levelname": "INFO", "name": "werkzeug", "message": " * Restarting with stat"}
+{"asctime": "2024-07-14 12:31:32,421", "levelname": "WARNING", "name": "werkzeug", "message": " * Debugger is active!"}
+{"asctime": "2024-07-14 12:31:32,427", "levelname": "INFO", "name": "werkzeug", "message": " * Debugger PIN: 110-677-777"}
+{"asctime": "2024-07-14 12:32:17,698", "levelname": "INFO", "name": "werkzeug", "message": " * Detected change in '/Users/logan/Desktop/react-flask-fileupload/backend/main.py', reloading"}
+{"asctime": "2024-07-14 12:32:17,719", "levelname": "INFO", "name": "werkzeug", "message": " * Restarting with stat"}
+{"asctime": "2024-07-14 12:32:17,867", "levelname": "WARNING", "name": "werkzeug", "message": " * Debugger is active!"}
+{"asctime": "2024-07-14 12:32:17,875", "levelname": "INFO", "name": "werkzeug", "message": " * Debugger PIN: 110-677-777"}
+{"asctime": "2024-07-14 12:32:28,150", "levelname": "INFO", "name": "werkzeug", "message": "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on http://127.0.0.1:5000"}
+{"asctime": "2024-07-14 12:32:28,151", "levelname": "INFO", "name": "werkzeug", "message": "\u001b[33mPress CTRL+C to quit\u001b[0m"}
+{"asctime": "2024-07-14 12:32:28,153", "levelname": "INFO", "name": "werkzeug", "message": " * Restarting with stat"}
+{"asctime": "2024-07-14 12:32:28,244", "levelname": "WARNING", "name": "werkzeug", "message": " * Debugger is active!"}
+{"asctime": "2024-07-14 12:32:28,250", "levelname": "INFO", "name": "werkzeug", "message": " * Debugger PIN: 110-677-777"}
