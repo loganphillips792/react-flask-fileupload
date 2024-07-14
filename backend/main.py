@@ -106,7 +106,7 @@ def upload_image():
 def get_image(filename):
     logger = logging.getLogger(__name__)
     logger.info(f'Finding image {filename}')
-    return send_file(os.path.join(app.config['UPLOAD_FOLDER'], filename), mimetype='image/png')
+    return send_file(os.path.join(app.config['UPLOAD_FOLDER'], filename), mimetype='image/png', as_attachment=True, download_name='hello_world.png')
 
 if __name__ == '__main__':
     app.run(debug=True)
