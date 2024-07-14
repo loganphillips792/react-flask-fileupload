@@ -20,18 +20,26 @@ dictConfig({
         'json': {
             'class': 'pythonjsonlogger.jsonlogger.JsonFormatter',
             'format': '%(asctime)s %(levelname)s %(name)s %(message)s'
-        }
+        },
+        'standard': {
+            'format': '%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+        },
     },
     'handlers': {
         'json_file': {
             'class': 'logging.FileHandler',
             'filename': 'app.log',
             'formatter': 'json'
-        }
+        },
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'standard',
+        },
     },
     'root': {
         'level': 'INFO',
-        'handlers': ['json_file']
+        'handlers': ['console']
     }
 })
 
