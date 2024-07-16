@@ -54,7 +54,7 @@ jobs:
           FAIL_UNDER: 8
       - name: Run Linting
         run: |
-          pylint --fail-under $FAIL_UNDER backend/app
+          pylint --fail-under=$FAIL_UNDER backend/app
   push_to_registry:
     environment: production
     name: Push Docker image to Docker hub
