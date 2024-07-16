@@ -12,7 +12,7 @@ This is a simple Flask and React application where a user can upload a file and 
 
 ## Running the application
 
-python3 main.py
+python3 app.py
 
 
 
@@ -20,3 +20,11 @@ python3 main.py
 ```curl -X POST -F "image=@/Users/Logan/Downloads/profile.jpg" http://127.0.0.1:5000/upload```
 
 ```curl -O http://localhost:5000/image/<filename>```
+
+## Running through Docker
+
+```cd react-flask-fileupload```
+
+```docker build -t your-flask-app -f backend/build/Dockerfile .```
+
+```docker run -p 5001:5000 your-flask-app```
