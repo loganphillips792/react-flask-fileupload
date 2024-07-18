@@ -9,6 +9,16 @@ from flask_cors import CORS
 import os
 import uuid
 import sqlite3
+from dotenv import load_dotenv
+import boto3
+from botocore.exceptions import ClientError
+
+load_dotenv()
+UPLOAD_FILES_TO_S3 = os.getenv('UPLOAD_FILES_TO_S3', 'False').lower() == 'true'
+AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY=os.getenv('AWS_SECRET_ACCESS_KEY')
+
+print(f"Uploading files to s3? {UPLOAD_FILES_TO_S3}")
 
 app = Flask(__name__)
 CORS(app)
@@ -85,8 +95,28 @@ def upload_image():
             new_filename = f"{uuid.uuid4()}.png"
             filepath = os.path.join(app.config['UPLOAD_FOLDER'], new_filename)
 
+
             # Save the black and white image
             bw_img.save(filepath, 'PNG')
+            
+            if UPLOAD_FILES_TO_S3:
+                print("Uploading image to s3")
+                s3_client = boto3.client(service_name='s3', aws_access_key_id=AWS_ACCESS_KEY_ID, aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
+
+                try:
+                    bucket = 'reactflaskfileuploadimages'
+                    file_name = f"{app.root_path}/../../processed_images/{new_filename}"
+                    object_name = 'random-image-object-name'
+                    response = s3_client.upload_file(file_name, bucket, object_name)
+                except Exception as e:
+                    print(e)
+                    logger.error(e)
+                    # return False
+                # return True
+            else:
+                print("Uploading image locally")
+
+            
             
             conn = get_db_connection()
             conn.execute('INSERT INTO images (filename, filepath) VALUES (?, ?)', (new_filename, filepath))

@@ -31,3 +31,11 @@ python3 backend/app/app.py
 ```docker build -t your-flask-app -f backend/build/Dockerfile .```
 
 ```docker run -p 5001:5000 your-flask-app```
+
+# Environment Variables
+
+# Generating AWS Credentials
+
+1. Select your account name in the top right corner
+2. Select Security Credentials from the drop-down list
+3. 'Create access key'
