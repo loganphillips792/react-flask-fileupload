@@ -8,6 +8,7 @@ from datetime import datetime
 from flask_cors import CORS
 import os
 import uuid
+import sqlite3
 
 app = Flask(__name__)
 CORS(app)
@@ -49,6 +50,14 @@ if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['DATABASE'] = 'images.db'
+
+print(app.root_path)
+
+def get_db_connection():
+    conn = sqlite3.connect(app.config['DATABASE'])
+    conn.row_factory = sqlite3.Row
+    return conn
 
 @app.route('/upload', methods=['POST'])
 def upload_image():
@@ -78,6 +87,10 @@ def upload_image():
 
             # Save the black and white image
             bw_img.save(filepath, 'PNG')
+            
+            conn = get_db_connection()
+            conn.execute('INSERT INTO images (filename, filepath) VALUES (?, ?)', (new_filename, filepath))
+            conn.commit()
 
             # Generate URL for the saved image
             image_url = url_for('get_image', filename=new_filename, _external=True)

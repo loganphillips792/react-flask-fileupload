@@ -12,8 +12,11 @@ This is a simple Flask and React application where a user can upload a file and 
 
 ## Running the application
 
-python3 app.py
+cd react-flask-fileupload
 
+python backend/db/__init__db.py
+
+python3 backend/app/app.py
 
 
 

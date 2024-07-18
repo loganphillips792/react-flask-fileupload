@@ -1,3 +1,4 @@
-backend/processed_images
-backend/*.log
+processed_images
+*.log
 .coverage
+*.db
