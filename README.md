@@ -39,3 +39,9 @@ python3 backend/app/app.py
 1. Select your account name in the top right corner
 2. Select Security Credentials from the drop-down list
 3. 'Create access key'
+
+# Features to add
+
+- S3 Upload
+- Retrieve S3 Image in frontned, display as thumbnail
+- Stripe

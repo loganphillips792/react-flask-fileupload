@@ -15,6 +15,12 @@ EXPOSE 5000
 # Define environment variable
 ENV FLASK_APP=app.py
 
+# RUN dir -s
+
+# RUN ls
+# RUN ls app
+RUN ls db
+
 RUN python db/__init__db.py
 
 # Run app.py when the container launches

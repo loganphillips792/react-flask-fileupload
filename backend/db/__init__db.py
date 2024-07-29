@@ -5,7 +5,7 @@ connection = sqlite3.connect('images.db')
 
 subprocess.run(["ls", "-l"]) 
 
-with open('backend/db/schema.sql') as f:
+with open('schema.sql') as f:
     connection.executescript(f.read())
 
 cur = connection.cursor()
