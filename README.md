@@ -2,7 +2,11 @@
 
 This is a simple Flask and React application where a user can upload a file and then it gets changed to black and white and then returned to the user.
 
-## Installing Python dependencies
+# TODO
+
+- Add supabase for authn and authz
+
+# Installing Python dependencies
 
 1. ```python3 -m venv ~/Desktop/FileUpload```
 2. ```source ~/Desktop/FileUpload/bin/activate``` - this line activates the virtual environment so your Python will use an packages that are installed in it
@@ -10,7 +14,7 @@ This is a simple Flask and React application where a user can upload a file and 
 4. ```~/Desktop/FileUpload/bin/python3 -m pip install --upgrade pip```
 5. ```pip install -r requirements.txt```
 
-## Running the application
+# Running the application
 
 cd react-flask-fileupload
 
